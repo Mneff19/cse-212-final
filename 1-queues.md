@@ -56,11 +56,41 @@ Since the element is added to the end and does not affect the position of other 
 
 Since removing the first element does affect the position of the rest of the elements, it is O(n).
 
-# Examples
-## Code samples - call center queue
-
 # Common Pitfalls
-## Syntax errors (very error-resistant structure)
+Queues are very bug-resistant. So long as you are accurately adding and removing elements in a FIFO structure, the only errors you'll encounter are syntax errors.
 
 # Sample Problem
-## Restaurant order queue
+Let's create a basic queue that takes orders for a chef at a restaurant and prints the next order when he/she is done with the current order. Actually implementing the full system would take a lot more than just a queue, but for this problem we are just going to make each order a simple line of text instead of a full object. We will also manually add/remove orders to simulate new customers coming in and adding new orders, and the chef current orders being finished.
+
+In other words, you should create the queue class and manually add new orders and remove them to simulate a restaurant chef getting new orders and completing them.
+
+Once you have made your solution, compare it with the one below:
+```
+class Queue:
+    def __init__(self):
+        self.queue = new list()
+
+    def add(val):
+        self.queue.append(val)
+
+    def remove():
+        val = self.queue[0]
+        del self.queue[0]
+        return val
+
+orderQueue = new Queue()
+
+# Add some orders
+orderQueue.add("Grilled Cheese")
+orderQueue.add("PB&J")
+
+# Pull the first one to work on
+print(orderQueue.remove()) # "Grilled Cheese"
+
+# More customers come in and place orders
+orderQueue.add("Eggs")
+orderQueue.add("Hamburger")
+
+# Completed first order, pull next one
+print(orderQueue.remove()) # "PB&J"
+```
