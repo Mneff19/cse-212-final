@@ -48,8 +48,12 @@ Usage is easy like adding - `queue.remove()`. Note that this will return the val
 
 # Performance
 **Adding - O(1)**
+
 Since the element is added to the end and does not affect the position of other elements, it is O(1).
+
+
 **Removing - O(n)**
+
 Since removing the first element does affect the position of the rest of the elements, it is O(n).
 
 # Examples
