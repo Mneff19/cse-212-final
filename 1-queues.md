@@ -12,9 +12,16 @@ When you're on hold and hear the classic line "your call will be answered in the
 Python does not natively support queues. However, it is not difficult to create a custom queue implementation using classes. Since a queue is defined by its FIFO structure, all you need to add is custom functionality to add and remove from the list.
 
 > [!NOTE]
-> Values will be stored in a list, so other features such as getting the length of the queue and finding a value at a given position will be the same syntax as a list.
+> Since queues are essentially lists with specific add/remove functionality, other functionality such as getting the length of the queue and finding a value at a given position is the same syntax as a list.
 
 ## Add to queue
+Adding to the queue is very straightforward. You will need to setup the base class then add this method:
+```
+add(val):
+    this.queue.append(val)
+```
+To use it, one would simply call `queue.add(val)`. Remember, since this is within a custom class you would need to instantiate a new instance of the queue class before calling this method.
+
 ## Remove from queue
 
 # Performance
