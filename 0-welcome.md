@@ -1,7 +1,7 @@
 # Python Data Structures
 Welcome to this tutorial on learning data structures in Python! In this course, we will review the following:
 - [Queues](./1-queues.md)
-- Sets
+- [Sets](./2-sets.md)
 - Trees
 Each topic will include an overview, notes on implementation, and examples.
 
